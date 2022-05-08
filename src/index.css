@@ -5,14 +5,63 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: aliceblue url("stuffs/tech-background.jpg");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .app{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  background: black;
+  flex-basis: fit-content;
+  justify-content: space-between;
+
+}
+
+.link{
+
+  color: white;
+  width: fit-content;
+  padding: 12px;
+  text-decoration: none;
+
+}
+
+
+
+/* .link:visited{
+  color: darkcyan;
+} */
+
+
+.link:hover{
+  color: brown;
+}
+
+
+.links{
+  display: flex;
+  font-size: 20px;
+  padding: 20px;
+  flex-direction: row;
+
+}
+
+.desc{
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+}
+.calc{
   width: 450px;
   height: 550px;
   top: 20px;
@@ -22,8 +71,8 @@ code {
   padding: 10px 10px;
   position: relative;
   border-radius: 24px;
-  background-color: rgb(231, 228, 228);
-  
+
+  background-color:lightgrey;
   
 }
 
@@ -34,6 +83,7 @@ code {
   color: rgb(14, 50, 82);
   margin: 12px;
 }
+
 .display{
   height: 60px;
   background-color:black;
@@ -42,9 +92,22 @@ code {
   border-style: double;
 }
 
+.expr{
+  display: flex;
+  justify-content: left;
+  padding: 0px 8px;
+}
+
+.result{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: start;
+}
 
 .input{
-  background-color: rgb(231, 228, 228);
+
   color:white;
   display:grid;
   padding: 20px;
@@ -52,9 +115,27 @@ code {
   
 }
 
+@keyframes rotate {
+  from{
+    transform: rotate(-180deg)
+  }
+  to{
+    transform: rotate(0deg)
+  }
+
+}
+
 .button{
   border-radius: 20px;
-  
+ 
+}
+
+
+.button:hover{
+  animation-name: rotate;
+  animation-duration: 0.5s;
+
+
 }
 
 .numbers{
@@ -170,4 +251,31 @@ code {
   justify-content: center;
   
   justify-self: end;
+}
+
+.footer{
+  background: black;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 15px;
+  justify-content: center;
+
+}
+
+footer{
+
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  justify-content: space-around;
+
+}
+
+#dev{
+  color: gray;
+  display: block;
+  align-content: center;
+  text-align: center;
+  font-size: 18px;
+
 }

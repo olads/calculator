@@ -1,29 +1,41 @@
-import { AppContext } from "../App"
+import { AppContext } from "./Calc"
 import { useContext } from "react"
+import Request from "../Request"
 
 
 const getStyle = (type) => {
+    let classes = "button ";
     if(type === "1"){
-        return "num"
+        classes = classes.concat("num")
     }
     else if (type === "2"){
-        return "oper"
+        classes = classes.concat("oper")
     }
     else if(type === "3" ){
         return "func"
     }
+    return classes;
 }
+
 const Button = ({type,value,id = ""}) => {
     if(!isNaN(value)){
         id += value;
-    }
+    } 
+ 
     const action = useContext(AppContext) 
-    const updateDisplay = (event) => {
-        if(type === "3"){
-            action("",2)
-        }
-        else if(id === "ans"){
+    const updateDisplay = () => {
+        console.log("The Id pressed is ",id)
+        // if(type === "3"){
+        //     action("",2)
+        // }
+        // else 
+        if(id === "ans"){
+            console.log("Answer button has been pressed")
+            let result = new Request().solve(value);
             console.log("Evaluate")
+            action(result,3)
+        }
+        else if(id === "clr"){
             action("",2)
         }
         else{
