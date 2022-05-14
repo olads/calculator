@@ -5,8 +5,8 @@ const Footer = (props) =>{
     return (
         <div className="footer">
             <footer>
-            <CLink to="/about" value="About Developer"/>
-            <CLink to="/contact" value="Contact Developer"/>
+            <CLink value="About Developer"/>
+            <CLink value="Contact Developer"/>
             </footer>
             <span id="dev">
                 Developed By MiGiA

@@ -1,12 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const CLink = ({to, value}) => {
+const CLink = ({value,action}) => {
     return(
-        <div >
-        <Link to={to} className="link">
+        <div className="link" onClick={action}>
             {value}
-        </Link>
     </div>
 
     )

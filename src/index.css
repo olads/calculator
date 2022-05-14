@@ -20,11 +20,15 @@ code {
 
 .nav{
   display: flex;
+height: 5vh;
   flex-direction: row;
   background: black;
   flex-basis: fit-content;
   justify-content: space-between;
 
+}
+.tab{
+  position:relative;
 }
 
 .link{
@@ -53,7 +57,17 @@ code {
   font-size: 20px;
   padding: 20px;
   flex-direction: row;
+  
+}
 
+.content{
+  width: 22vw;
+
+  right: 3px;
+  border-radius: 20px;
+  position: absolute;
+  background: black;
+  padding: 5px;
 }
 
 .desc{
@@ -279,3 +293,4 @@ footer{
   font-size: 18px;
 
 }
+
