@@ -19,11 +19,10 @@ code {
 }
 
 .nav{
+  height: 10vh;
   display: flex;
-height: 5vh;
   flex-direction: row;
   background: black;
-  flex-basis: fit-content;
   justify-content: space-between;
 
 }
@@ -55,30 +54,48 @@ height: 5vh;
 .links{
   display: flex;
   font-size: 20px;
-  padding: 20px;
+
   flex-direction: row;
   
 }
 
 .content{
   width: 22vw;
-
+ height: 30vh;
   right: 3px;
   border-radius: 20px;
   position: absolute;
   background: black;
   padding: 5px;
 }
+.form{
+  padding: 12px;
+    display: flex;
+  justify-content: center;
+  align-items: center; 
+   flex-direction: column;
+}
+.register{
+
+
+}
+
+.signin-signup{
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+}
+
 
 .desc{
   font-size: 30px;
-  padding: 20px;
+  padding-left: 15px;
   color: white;
 }
 .calc{
   width: 450px;
   height: 550px;
-  top: 20px;
+  top: 10px;
   text-align: center;
   box-shadow: 8px 8px rgb(95, 93, 95);
   margin: auto;

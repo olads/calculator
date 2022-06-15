@@ -22,7 +22,7 @@ const Button = ({type,value,id = ""}) => {
         id += value;
     } 
  
-    const action = useContext(AppContext) 
+    const action = useContext(AppContext)
     const updateDisplay = () => {
         console.log("The Id pressed is ",id)
         // if(type === "3"){
@@ -30,10 +30,10 @@ const Button = ({type,value,id = ""}) => {
         // }
         // else 
         if(id === "ans"){
-            console.log("Answer button has been pressed")
-            let result = new Request().solve(value);
-            console.log("Evaluate")
-            action(result,3)
+            // console.log("Answer button has been pressed")
+            // let result = Request.solve(value);
+            // console.log(result)
+            action(value,3)
         }
         else if(id === "clr"){
             action("",2)
